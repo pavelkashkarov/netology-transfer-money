@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import ru.netology.exception.ConfirmException;
 import ru.netology.exception.InputDataException;
 import ru.netology.exception.TransferException;
-import ru.netology.model.response.ErrorRS;
+import ru.netology.dto.response.ErrorRS;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -28,6 +28,11 @@ public class TransferMoneyControllerAdvice {
 
     @ExceptionHandler(ConfirmException.class)
     public ResponseEntity<ErrorRS> handleConfirmation(ConfirmException e) {
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ErrorRS(e.getMessage(), incrementAndGetId()));
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorRS> handleAllOtherExceptions(Exception e) {
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new ErrorRS(e.getMessage(), incrementAndGetId()));
     }
 

@@ -1,7 +1,7 @@
 package ru.netology.repository;
 
 import ru.netology.model.Card;
-import ru.netology.model.request.TransferRQ;
+import ru.netology.dto.request.TransferRQ;
 
 public interface TransferMoneyRepository {
 

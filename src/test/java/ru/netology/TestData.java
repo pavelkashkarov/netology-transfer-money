@@ -2,8 +2,8 @@ package ru.netology;
 
 import ru.netology.model.Amount;
 import ru.netology.model.Card;
-import ru.netology.model.request.ConfirmRQ;
-import ru.netology.model.request.TransferRQ;
+import ru.netology.dto.request.ConfirmRQ;
+import ru.netology.dto.request.TransferRQ;
 
 public class TestData {
 

@@ -5,9 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import ru.netology.model.Card;
-import ru.netology.model.request.TransferRQ;
-import ru.netology.repository.TransferMoneyRepository;
-import ru.netology.repository.TransferMoneyRepositoryImpl;
+import ru.netology.dto.request.TransferRQ;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

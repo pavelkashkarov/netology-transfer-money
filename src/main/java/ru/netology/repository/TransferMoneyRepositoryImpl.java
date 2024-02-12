@@ -3,7 +3,7 @@ package ru.netology.repository;
 import org.springframework.stereotype.Repository;
 import ru.netology.model.Amount;
 import ru.netology.model.Card;
-import ru.netology.model.request.TransferRQ;
+import ru.netology.dto.request.TransferRQ;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;

@@ -1,4 +1,4 @@
-package ru.netology.model.response;
+package ru.netology.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

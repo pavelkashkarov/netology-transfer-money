@@ -1,21 +1,20 @@
 package ru.netology.controller;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import ru.netology.model.request.ConfirmRQ;
-import ru.netology.model.request.TransferRQ;
-import ru.netology.model.response.TransferAndConfirmRS;
-import ru.netology.service.TransferMoneyService;
+import ru.netology.dto.request.ConfirmRQ;
+import ru.netology.dto.request.TransferRQ;
+import ru.netology.dto.response.TransferAndConfirmRS;
+import ru.netology.service.TransferMoneyServiceImpl;
 
 @RestController
-@AllArgsConstructor
-@CrossOrigin(origins = "${cross.origin.host.name}", maxAge = 3600)
+@RequiredArgsConstructor
 public class TransferMoneyController {
 
-    private TransferMoneyService service;
+    private final TransferMoneyServiceImpl service;
 
     @PostMapping("/transfer")
     public TransferAndConfirmRS postTransfer(@RequestBody TransferRQ transferRequest) {
